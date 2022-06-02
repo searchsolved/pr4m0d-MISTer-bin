@@ -1,7 +1,7 @@
 <misterromdescription>
     <about author="pram0d" webpage="https://pram0d.com" source="https://github.com/psomashekar" twitter="@pr4m0d"/>
-    <name>Armed Police Batrider (USA) (Fri Feb 13 1998)</name>
-    <setname>batrideru</setname>
+    <name>Armed Police Batrider (Europe) (Fri Feb 13 1998)</name>
+    <setname>batrider</setname>
     <rbf>batrider</rbf>
     <mameversion>0229</mameversion>
     <year>1998</year>
@@ -9,19 +9,15 @@
     <players>2</players>
     <joystick>8-way</joystick>
     <rotation>vertical</rotation>
-    <region>USA</region>
+    <region>Europe</region>
     <platform>Toaplan 2</platform>
     <category>Shoot&apos;em up</category>
     <catver>Shooter / Flying Vertical</catver>
     <mraauthor>pram0d</mraauthor>
-    <platform>Toaplan 2</platform>
-    <category>Shoot&apos;em up</category>
-    <catver>Shooter / Flying Vertical</catver>
-    <mraauthor>pram0d</mraauthor>
-    <rom index="0" zip="batrideru.zip|batrider.zip" md5="none" address="0x30000000">
+    <rom index="0" zip="batrider.zip" md5="none" address="0x30000000">
         <!-- maincpu - starts at 0x0 -->
         <interleave output="16">
-            <part name="prg0_usa.u22" crc="2049d007" map="01"/>
+            <part name="prg0_europe.u22" crc="91d3e975" map="01"/>
             <part name="prg1b.u23" crc="8e70b492" map="10"/>
         </interleave>
         <interleave output="16">
@@ -50,19 +46,29 @@
         <part>01</part>
     </rom>
     <switches default="00,00,00" base="8">
-        <dip bits="0" name="Test Mode" ids="Off, On"/>
-        <dip bits="1" name="Starting Coin" ids="1 Credit, 2 Credits"/>
-        <dip bits="2,4" name="Coin 1" ids="1 Coin/1 Credit, 1 Coin/2 Credits, 1 Coin/3 Credits, 1 Coin/4 Credits, 2 Coins/1 Credit, 3 Coins/1 Credit, 4 Coins/1 Credit, Free Play"/>
-        <dip bits="5,7" name="Coin 2" ids="1 Coin/1 Credit, 1 Coin/2 Credits, 1 Coin/3 Credits, 1 Coin/4 Credits, 2 Coins/1 Credit, 3 Coins/1 Credit, 4 Coins/1 Credit, Free Play"/>
-        <dip bits="8,9" name="Start Rank" ids="Normal, Easy, Hard, Very Hard"/>
-        <dip bits="10,11" name="Timer Rank" ids="Normal, Low, High, Highest"/>
-        <dip bits="12,13" name="Player Counts" ids="3, 4, 2, 1"/>
-        <dip bits="14,15" name="Extra Player" ids="1.5mil Each, 1mil Each, 2mil Each, No Extra"/>
-        <dip bits="16" name="Screen Flip" ids="Off, On"/>
-        <dip bits="17" name="Demo Sound" ids="On, No Sound"/>
-        <dip bits="18" name="Stage Edit" ids="Disable, Enable"/>
-        <dip bits="19" name="Continue Play" ids="Enable, Disable"/>
-        <dip bits="20" name="Invincible" ids="Off, On"/>
+        <!-- DSW -->
+        <dip name="Service Mode" bits="0" ids="Off,On"/>
+        <dip name="Credits to Start" bits="1" ids="1,2"/>
+        <dip name="Joystick Mode" bits="1" ids="Normal,90 degrees ACW"/>
+        <dip name="Coin A" bits="2,4" ids="1/1,1/2,1/3,1/4,2/1,3/1,4/1,Free Play"/>
+        <dip name="Hit Score" bits="5" ids="Off,On"/>
+        <dip name="Sound Effect" bits="6" ids="Off,On"/>
+        <dip name="Music" bits="7" ids="Off,On"/>
+        <dip name="Coin B" bits="5,7" ids="1/1,1/2,1/3,1/4,2/1,3/1,4/1"/>
+        <dip name="Difficulty" bits="8,9" ids="Normal,Easy,Hard,Very Hard"/>
+        <dip name="Timer" bits="10,11" ids="Normal,Low,High,Highest"/>
+        <dip name="Lives" bits="12,13" ids="3,4,2,1"/>
+        <dip name="Bonus Life" bits="14,15" ids="Every 1500k,Every 1000k,Every 2000k,None"/>
+        <!-- SYS-DSW -->
+        <dip name="Test Switch" bits="18" ids="Off,On"/>
+        <dip name="Flip Screen" bits="24" ids="Off,On"/>
+        <dip name="Demo Sounds" bits="25" ids="On,Off"/>
+        <dip name="Stage Edit" bits="26" ids="Off,On"/>
+        <dip name="Allow Continue" bits="27" ids="Yes,No"/>
+        <dip name="Invulnerability (Cheat)" bits="28" ids="Off,On"/>
+        <dip name="Guest Players" bits="29" ids="On,Off"/>
+        <dip name="Player Select" bits="30" ids="On,Off"/>
+        <dip name="Special Course" bits="31" ids="On,Off"/>
     </switches>
     <buttons names="Shot,Bomb,Formation,Coin,Start" default="Y,A,B,Select,Start" count="3"/>
 </misterromdescription>
