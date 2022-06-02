@@ -8,7 +8,7 @@
 4) Run game via .mra file.
 
 ## Core Versions
-- Armed Police Batrider (batrideru) - Early Alpha Preview 06222022
+- Armed Police Batrider (batrideru) - Early Alpha Preview 06022022
 
 ## License
 MIT
